@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Main page</title>
+    <title>Cargebeya</title>
 </head>
 <body>
 
@@ -56,6 +56,10 @@
                         <a href="/"><img src="img/logo/logo.png" alt="logo"></a>
                     </div>
                     <nav class="nav-main">
+                        <input type="checkbox">
+                        <span class="top"></span>
+                        <span class="center"></span>
+                        <span class="bottom"></span>
                         <ul class="navbar">
                             <li><a href="#">Cars</a></li>
                             <li><a href="#">Bikes</a></li>
@@ -77,6 +81,8 @@
     <!--CONTENT-->
     <main id="main-page">
 
+
+        <!--section-banner-->
         <section class="section-banner">
             <div class="container">
                 <div class="section-banner-description">
@@ -85,6 +91,8 @@
                 </div>
             </div>
         </section>
+
+        <!--section-select-->
         <section class="section-select">
             <div class="container">
                 <div class="section-select-holder">
@@ -109,11 +117,11 @@
                                 <div class="select-price">
                                     <div class="select-price-top">
                                         <span class="title">Price range</span>
-                                        <span class="title-range">from<span class="value">$45,000,000</span>to<span
-                                                class="value">$50,000,000</span></span>
+                                        <span class="title-range">from<span id="from" class="value"></span>to<span id="to"
+                                                class="value"></span></span>
                                     </div>
                                     <div class="select-price-range">
-                                        <input type="range">
+                                        <input type="hidden" class="slider"/>
                                     </div>
                                 </div>
                             </div>
@@ -138,12 +146,547 @@
             </div>
         </section>
 
+        <!--section-top brands-->
+        <section class="section section-brands">
+            <div class="container">
+                <h2 class="section-title">Top Make</h2>
+                <div class="section-brands-holder">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/logo-audi.png" alt="audi">
+                        </div>
+                        <div class="card-description">
+                            <span>Audi</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/bmw-logo.png" alt="bmw">
+                        </div>
+                        <div class="card-description">
+                            <span>BMW</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/toyota.png" alt="toyota">
+                        </div>
+                        <div class="card-description">
+                            <span>Toyota</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/vw-logo.png" alt="vw">
+                        </div>
+                        <div class="card-description">
+                            <span>Volkswagen</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/honda-logo.png" alt="honda">
+                        </div>
+                        <div class="card-description">
+                            <span>Honda</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/hyundai-h-emblem.png" alt="hyundai">
+                        </div>
+                        <div class="card-description">
+                            <span>Hyundai</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/renault-logo.png" alt="renault">
+                        </div>
+                        <div class="card-description">
+                            <span>Renault</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/brands/kia-logo.png" alt="kia">
+                        </div>
+                        <div class="card-description">
+                            <span>KIA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-holder">
+                    <a href="#" class="btn-inner">View all 164 makes</a>
+                </div>
+                <div class="ads">
+                    <a href="#">
+                        <img src="https://www.westownmovies.com/wp-content/uploads/2014/03/MattSlap_3_2014v2.jpg"
+                             alt="ads">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--section types-->
+        <section class="section section-types">
+            <div class="container">
+                <h2 class="section-title">Type</h2>
+                <div class="section-types-holder">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/types/icon-saloon.png" alt="saloon">
+                        </div>
+                        <div class="card-description">
+                            <span>Saloon</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/types/icon-hatchback.png" alt="hatchback">
+                        </div>
+                        <div class="card-description">
+                            <span>Hatchback</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/types/icon-suv.png" alt="suv">
+                        </div>
+                        <div class="card-description">
+                            <span>4 Wheel Drives & SUVs</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/types/icon-convertible.png" alt="convertible">
+                        </div>
+                        <div class="card-description">
+                            <span>Convertibles & Station Wagons</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/types/icon-mpv.png" alt="mpv">
+                        </div>
+                        <div class="card-description">
+                            <span>Buses & Vans</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/types/icon-pickup.png" alt="pickup">
+                        </div>
+                        <div class="card-description">
+                            <span>Trucks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--section-recent-card-->
+        <section class="section section-recent-cars">
+            <div class="container">
+                <h2 class="section-title">Most recent cars for sale in <span>Ethiopia</span></h2>
+                <div class="recent-cars-holder">
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">32</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2017 Genesis G90 3.3T Premium</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 2,150,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">27K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img2.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">14</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2014 Subaru Forester 2.5i</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 4,100,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">2K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img3.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">16</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2016 Toyota 4Runner SR5</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 5,850,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">9K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img4.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">21</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2013 Mini Cooper</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 1,600,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">32K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img5.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">29</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2012 Volvo XC70 T6</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 1,782,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">46K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">32</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2017 Genesis G90 3.3T Premium</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 2,150,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">27K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img2.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">14</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2014 Subaru Forester 2.5i</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 4,100,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">2K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img3.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">16</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2016 Toyota 4Runner SR5</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 5,850,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">9K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detailed">
+                        <div class="card-detailed-image">
+                            <img src="img/cars/img4.jpg" alt="car">
+                            <div class="quantity-images">
+                                <span class="quantity-images-value">21</span>
+                            </div>
+                        </div>
+                        <div class="card-detailed-description">
+                            <h3 class="card-title">2013 Mini Cooper</h3>
+                            <div class="section-values">
+                                <div class="price">
+                                    <span class="title">Price</span>
+                                    <span class="value">Br 1,600,000</span>
+                                </div>
+                                <div class="mileage">
+                                    <span class="title">Mileage</span>
+                                    <span class="value">32K</span>
+                                </div>
+                            </div>
+                            <div class="location">
+                                <span class="destination">Ethiopia - Addis - Ababa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-more-cars">
+                        <div class="decor-circle"></div>
+                        <div class="decor-arrow"></div>
+                        <p class="title">View all cars in <span>Ethiopia</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!--FOOTER-->
     <footer class="footer">
         <div class="container">
-            footer
+            <div class="footer-holder">
+                <div class="footer-top">
+                    <div class="popular-cars">
+                        <div class="popular-cars-header">
+                            <div>
+                                <img src="img/icons/ic-car.png" alt="ico">
+                            </div>
+                            <p class="title">Top 20 most popular <span>cars</span></p>
+                        </div>
+                        <div class="popular-cars-links">
+                            <ul>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="popular-cars">
+                        <div class="popular-cars-header">
+                            <div>
+                                <img src="img/icons/ic-moto.png" alt="ico">
+                            </div>
+                            <p class="title">Top 20 most popular <span>bikes</span></p>
+                        </div>
+                        <div class="popular-cars-links">
+                            <ul>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="popular-cars">
+                        <div class="popular-cars-header">
+                            <div>
+                                <img src="img/icons/ic-truck.png" alt="ico">
+                            </div>
+                            <p class="title">Top 20 most popular <span>trucks</span></p>
+                        </div>
+                        <div class="popular-cars-links">
+                            <ul>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="popular-cars">
+                        <div class="popular-cars-header">
+                            <div>
+                                <img src="img/icons/ic-makes.png" alt="ico">
+                            </div>
+                            <p class="title">Top 20 most popular <span>makes</span></p>
+                        </div>
+                        <div class="popular-cars-links">
+                            <ul>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="popular-cars">
+                        <div class="popular-cars-header">
+                            <div>
+                                <img src="img/icons/ic-models.png" alt="ico">
+                            </div>
+                            <p class="title">Top 20 most popular <span>models</span></p>
+                        </div>
+                        <div class="popular-cars-links">
+                            <ul>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Ethiopia</a></li>
+                                <li><a href="#">Top 20 most popular cars in Madagaskar</a></li>
+                                <li><a href="#">Top 20 most popular cars in Zambia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-partners">
+                    <p class="title-inner">Find us in other countries</p>
+                    <div class="footer-partners-holder">
+                        <ul class="list-partners">
+                            <li>
+                                <div>
+                                    <img src="img/icons/ethiopia.png" alt="ethiopia">
+                                </div>
+                                <a href="#">Buy and sell car in Ethiopia</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/icons/ethiopia.png" alt="ethiopia">
+                                </div>
+                                <a href="#">Buy and sell car in Burundi</a>
+                            </li>
+                        </ul>
+                        <ul class="list-partners">
+                            <li>
+                                <div>
+                                    <img src="img/icons/swaziland.png" alt="swaziland">
+                                </div>
+                                <a href="#">Buy and sell car in Swaziland</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/icons/swaziland.png" alt="swaziland">
+                                </div>
+                                <a href="#">Buy and sell car in Zambia</a>
+                            </li>
+                        </ul>
+                        <ul class="list-partners">
+                            <li>
+                                <div>
+                                    <img src="img/icons/togo.png" alt="togo">
+                                </div>
+                                <a href="#">Buy and sell car in Togo</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/icons/togo.png" alt="togo">
+                                </div>
+                                <a href="#">Buy and sell car in Benin</a>
+                            </li>
+                        </ul>
+                        <ul class="list-partners">
+                            <li>
+                                <div>
+                                    <img src="img/icons/rwanda.png" alt="rwanda">
+                                </div>
+                                <a href="#">Buy and sell car in Rwanda</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/icons/rwanda.png" alt="rwanda">
+                                </div>
+                                <a href="#">Buy and sell car in Madagascar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="logo">
+                        <a href="/"><img src="img/logo/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="copyright">
+                        <span class="copy">Copyright &copy; 2017   All right reserved.</span>
+                        <span class="afr-group"><a href="#">CarGebeya.com</a> is part of <a class="afr-group-link" href="#"><img src="img/logo/africargroup-footer-logo.png" alt="africargroup"></a>, the leading automotive classifieds platforms in Africa</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
